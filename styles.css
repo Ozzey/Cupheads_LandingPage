@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 
 :root {
   --primary-color: #004d30;
@@ -26,6 +30,7 @@
   background: var(--background-color);
   position: relative;
 }
+
 nav {
   width: 85%;
   margin: auto;
@@ -34,6 +39,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+
 .logo {
   width: 70px;
   cursor: pointer;
@@ -129,6 +135,44 @@ span {
 }
 .social-links a:hover {
   color: var(--primary-color);
+}
+
+
+@media (max-width: 481px) {
+  body {
+    overflow-x: visible; /* Allow horizontal scrolling on small screens if needed */
+    overflow-y: hidden;
+  }
+
+  .hero,
+  .info,
+  .social-links {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-img{
+    width: 120%;
+  }
+
+  .img-box {
+    width: 80%; /* Adjust the width as needed */
+    right: 10%; /* Adjust the right position as needed */
+  }
+
+  .img-box img {
+    height: 50%; /* Adjust the height as needed */
+  }
+
+  .info a {
+    display: block;
+    margin: 20px auto; /* Adjust the margin as needed */
+  }
+
+  .info p {
+    width: auto; /* Allow the text to wrap automatically */
+  }
 }
 
 
